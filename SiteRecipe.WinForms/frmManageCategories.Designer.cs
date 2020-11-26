@@ -29,172 +29,119 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmManageCategories));
-            this.NewCatGrBox = new System.Windows.Forms.GroupBox();
-            this.CatNameLbl = new System.Windows.Forms.Label();
-            this.CatNameTxt = new System.Windows.Forms.TextBox();
-            this.RemoveCatGrBox = new System.Windows.Forms.GroupBox();
-            this.CatChckLstBox = new System.Windows.Forms.CheckedListBox();
-            this.UpdateCatGrBox = new System.Windows.Forms.GroupBox();
-            this.NewNameCatLbl = new System.Windows.Forms.Label();
-            this.NewNameCatTxt = new System.Windows.Forms.TextBox();
-            this.CatListBox = new System.Windows.Forms.ListBox();
-            this.SaveCatBtn = new System.Windows.Forms.Button();
-            this.NewCatGrBox.SuspendLayout();
-            this.RemoveCatGrBox.SuspendLayout();
-            this.UpdateCatGrBox.SuspendLayout();
+            this.UpdateBtn = new System.Windows.Forms.Button();
+            this.CategoriesDtGridVw = new System.Windows.Forms.DataGridView();
+            this.label1 = new System.Windows.Forms.Label();
+            this.CategoryNameTxt = new System.Windows.Forms.TextBox();
+            this.InsertBtn = new System.Windows.Forms.Button();
+            this.RemoveBtn = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.CategoriesDtGridVw)).BeginInit();
             this.SuspendLayout();
             // 
-            // NewCatGrBox
+            // UpdateBtn
             // 
-            this.NewCatGrBox.Controls.Add(this.CatNameLbl);
-            this.NewCatGrBox.Controls.Add(this.CatNameTxt);
-            this.NewCatGrBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.NewCatGrBox.Location = new System.Drawing.Point(12, 12);
-            this.NewCatGrBox.Name = "NewCatGrBox";
-            this.NewCatGrBox.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.NewCatGrBox.Size = new System.Drawing.Size(325, 85);
-            this.NewCatGrBox.TabIndex = 0;
-            this.NewCatGrBox.TabStop = false;
-            this.NewCatGrBox.Text = "New Category";
+            this.UpdateBtn.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.UpdateBtn.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.UpdateBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.UpdateBtn.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.UpdateBtn.Location = new System.Drawing.Point(141, 255);
+            this.UpdateBtn.Name = "UpdateBtn";
+            this.UpdateBtn.Size = new System.Drawing.Size(69, 29);
+            this.UpdateBtn.TabIndex = 57;
+            this.UpdateBtn.Text = "Update";
+            this.UpdateBtn.UseVisualStyleBackColor = false;
+            this.UpdateBtn.Click += new System.EventHandler(this.UpdateBtn_Click);
             // 
-            // CatNameLbl
+            // CategoriesDtGridVw
             // 
-            this.CatNameLbl.AutoSize = true;
-            this.CatNameLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CatNameLbl.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.CatNameLbl.Location = new System.Drawing.Point(30, 14);
-            this.CatNameLbl.Name = "CatNameLbl";
-            this.CatNameLbl.Size = new System.Drawing.Size(41, 15);
-            this.CatNameLbl.TabIndex = 53;
-            this.CatNameLbl.Text = "Name";
+            this.CategoriesDtGridVw.BackgroundColor = System.Drawing.SystemColors.Window;
+            this.CategoriesDtGridVw.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.CategoriesDtGridVw.Location = new System.Drawing.Point(42, 94);
+            this.CategoriesDtGridVw.Name = "CategoriesDtGridVw";
+            this.CategoriesDtGridVw.Size = new System.Drawing.Size(265, 137);
+            this.CategoriesDtGridVw.TabIndex = 58;
+            this.CategoriesDtGridVw.RowHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.CategoriesDtGridVw_RowHeaderMouseClick);
             // 
-            // CatNameTxt
+            // label1
             // 
-            this.CatNameTxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CatNameTxt.Location = new System.Drawing.Point(30, 34);
-            this.CatNameTxt.Name = "CatNameTxt";
-            this.CatNameTxt.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.CatNameTxt.Size = new System.Drawing.Size(265, 24);
-            this.CatNameTxt.TabIndex = 1;
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.label1.Location = new System.Drawing.Point(42, 26);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(92, 15);
+            this.label1.TabIndex = 60;
+            this.label1.Text = "Category Name";
             // 
-            // RemoveCatGrBox
+            // CategoryNameTxt
             // 
-            this.RemoveCatGrBox.Controls.Add(this.CatChckLstBox);
-            this.RemoveCatGrBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.RemoveCatGrBox.Location = new System.Drawing.Point(12, 110);
-            this.RemoveCatGrBox.Name = "RemoveCatGrBox";
-            this.RemoveCatGrBox.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.RemoveCatGrBox.Size = new System.Drawing.Size(325, 197);
-            this.RemoveCatGrBox.TabIndex = 55;
-            this.RemoveCatGrBox.TabStop = false;
-            this.RemoveCatGrBox.Text = "Remove Category";
+            this.CategoryNameTxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CategoryNameTxt.Location = new System.Drawing.Point(42, 46);
+            this.CategoryNameTxt.Name = "CategoryNameTxt";
+            this.CategoryNameTxt.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.CategoryNameTxt.Size = new System.Drawing.Size(265, 24);
+            this.CategoryNameTxt.TabIndex = 59;
             // 
-            // CatChckLstBox
+            // InsertBtn
             // 
-            this.CatChckLstBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CatChckLstBox.FormattingEnabled = true;
-            this.CatChckLstBox.Location = new System.Drawing.Point(30, 33);
-            this.CatChckLstBox.Name = "CatChckLstBox";
-            this.CatChckLstBox.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.CatChckLstBox.ScrollAlwaysVisible = true;
-            this.CatChckLstBox.Size = new System.Drawing.Size(265, 137);
-            this.CatChckLstBox.TabIndex = 4;
+            this.InsertBtn.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.InsertBtn.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.InsertBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.InsertBtn.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.InsertBtn.Location = new System.Drawing.Point(42, 255);
+            this.InsertBtn.Name = "InsertBtn";
+            this.InsertBtn.Size = new System.Drawing.Size(69, 29);
+            this.InsertBtn.TabIndex = 61;
+            this.InsertBtn.Text = "Insert";
+            this.InsertBtn.UseVisualStyleBackColor = false;
+            this.InsertBtn.Click += new System.EventHandler(this.InsertBtn_Click);
             // 
-            // UpdateCatGrBox
+            // RemoveBtn
             // 
-            this.UpdateCatGrBox.Controls.Add(this.NewNameCatLbl);
-            this.UpdateCatGrBox.Controls.Add(this.NewNameCatTxt);
-            this.UpdateCatGrBox.Controls.Add(this.CatListBox);
-            this.UpdateCatGrBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.UpdateCatGrBox.Location = new System.Drawing.Point(359, 12);
-            this.UpdateCatGrBox.Name = "UpdateCatGrBox";
-            this.UpdateCatGrBox.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.UpdateCatGrBox.Size = new System.Drawing.Size(325, 295);
-            this.UpdateCatGrBox.TabIndex = 56;
-            this.UpdateCatGrBox.TabStop = false;
-            this.UpdateCatGrBox.Text = "Update Category";
-            // 
-            // NewNameCatLbl
-            // 
-            this.NewNameCatLbl.AutoSize = true;
-            this.NewNameCatLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.NewNameCatLbl.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.NewNameCatLbl.Location = new System.Drawing.Point(30, 222);
-            this.NewNameCatLbl.Name = "NewNameCatLbl";
-            this.NewNameCatLbl.Size = new System.Drawing.Size(41, 15);
-            this.NewNameCatLbl.TabIndex = 46;
-            this.NewNameCatLbl.Text = "Name";
-            // 
-            // NewNameCatTxt
-            // 
-            this.NewNameCatTxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.NewNameCatTxt.Location = new System.Drawing.Point(30, 242);
-            this.NewNameCatTxt.Name = "NewNameCatTxt";
-            this.NewNameCatTxt.Size = new System.Drawing.Size(265, 24);
-            this.NewNameCatTxt.TabIndex = 3;
-            // 
-            // CatListBox
-            // 
-            this.CatListBox.AllowDrop = true;
-            this.CatListBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CatListBox.FormattingEnabled = true;
-            this.CatListBox.ItemHeight = 18;
-            this.CatListBox.Location = new System.Drawing.Point(30, 34);
-            this.CatListBox.Name = "CatListBox";
-            this.CatListBox.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.CatListBox.ScrollAlwaysVisible = true;
-            this.CatListBox.Size = new System.Drawing.Size(265, 130);
-            this.CatListBox.TabIndex = 2;
-            // 
-            // SaveCatBtn
-            // 
-            this.SaveCatBtn.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.SaveCatBtn.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.SaveCatBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SaveCatBtn.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.SaveCatBtn.Location = new System.Drawing.Point(280, 326);
-            this.SaveCatBtn.Name = "SaveCatBtn";
-            this.SaveCatBtn.Size = new System.Drawing.Size(136, 29);
-            this.SaveCatBtn.TabIndex = 57;
-            this.SaveCatBtn.Text = "Save";
-            this.SaveCatBtn.UseVisualStyleBackColor = false;
+            this.RemoveBtn.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.RemoveBtn.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.RemoveBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.RemoveBtn.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.RemoveBtn.Location = new System.Drawing.Point(238, 255);
+            this.RemoveBtn.Name = "RemoveBtn";
+            this.RemoveBtn.Size = new System.Drawing.Size(69, 29);
+            this.RemoveBtn.TabIndex = 62;
+            this.RemoveBtn.Text = "Remove";
+            this.RemoveBtn.UseVisualStyleBackColor = false;
+            this.RemoveBtn.Click += new System.EventHandler(this.RemoveBtn_Click);
             // 
             // frmManageCategories
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.AutoSize = true;
-            this.ClientSize = new System.Drawing.Size(696, 377);
-            this.Controls.Add(this.SaveCatBtn);
-            this.Controls.Add(this.UpdateCatGrBox);
-            this.Controls.Add(this.RemoveCatGrBox);
-            this.Controls.Add(this.NewCatGrBox);
+            this.ClientSize = new System.Drawing.Size(346, 309);
+            this.Controls.Add(this.RemoveBtn);
+            this.Controls.Add(this.InsertBtn);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.CategoryNameTxt);
+            this.Controls.Add(this.CategoriesDtGridVw);
+            this.Controls.Add(this.UpdateBtn);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
+            this.MaximizeBox = false;
             this.Name = "frmManageCategories";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Manage Categories";
-            this.NewCatGrBox.ResumeLayout(false);
-            this.NewCatGrBox.PerformLayout();
-            this.RemoveCatGrBox.ResumeLayout(false);
-            this.UpdateCatGrBox.ResumeLayout(false);
-            this.UpdateCatGrBox.PerformLayout();
+            this.Load += new System.EventHandler(this.frmManageCategories_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.CategoriesDtGridVw)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.GroupBox NewCatGrBox;
-        private System.Windows.Forms.Label CatNameLbl;
-        private System.Windows.Forms.TextBox CatNameTxt;
-        private System.Windows.Forms.GroupBox RemoveCatGrBox;
-        private System.Windows.Forms.CheckedListBox CatChckLstBox;
-        private System.Windows.Forms.GroupBox UpdateCatGrBox;
-        private System.Windows.Forms.Label NewNameCatLbl;
-        private System.Windows.Forms.TextBox NewNameCatTxt;
-        private System.Windows.Forms.ListBox CatListBox;
-        private System.Windows.Forms.Button SaveCatBtn;
+        private System.Windows.Forms.Button UpdateBtn;
+        private System.Windows.Forms.DataGridView CategoriesDtGridVw;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox CategoryNameTxt;
+        private System.Windows.Forms.Button InsertBtn;
+        private System.Windows.Forms.Button RemoveBtn;
     }
 }

@@ -87,10 +87,20 @@ namespace SiteRecipe.Data.Repositories
                 catNameParam.Direction = ParameterDirection.Input;
                 catNameParam.SqlDbType = SqlDbType.NVarChar;
 
+                SqlParameter outParam = new SqlParameter();
+                outParam.ParameterName = "@CategoryId";
+                outParam.Value = category.Id;
+                outParam.Direction = ParameterDirection.Output;
+                outParam.SqlDbType = SqlDbType.Int;
+
+                cmd.Parameters.Add(outParam);
                 cmd.Parameters.Add(catNameParam);
 
                 conn.Open();
-                int id = (int)cmd.ExecuteScalar();
+
+                int affectedRows = cmd.ExecuteNonQuery();
+
+                int id = (int)outParam.Value;
                 category.Id = id;
             }
         }
@@ -104,6 +114,7 @@ namespace SiteRecipe.Data.Repositories
                 cmd.CommandText = "spUpdateCategory";
                 cmd.CommandType = CommandType.StoredProcedure;
 
+                cmd.Parameters.AddWithValue("@CategoryId", category.Id);
                 cmd.Parameters.AddWithValue("@CategoryName", category.CategoryName);
 
                 conn.Open();

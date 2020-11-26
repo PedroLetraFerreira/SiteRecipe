@@ -22,9 +22,9 @@ namespace SiteRecipe.WinForms
             //Application.Run(new frmManageIngredients());
             //Application.Run(new frmManageAccounts());
             //Application.Run(new frmManageUsers());
-            //Application.Run(new frmManageCategories());
+            Application.Run(new frmManageCategories());
             //Application.Run(new frmManageRecipes());
-            Application.Run(new frmUpdateRecipe());
+            //Application.Run(new frmUpdateRecipe());
             //Application.Run(new frmSearchRecipe());
             //Application.Run(new frmSearchUser());
             //Application.Run(new frmPrincipal());

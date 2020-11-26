@@ -31,11 +31,11 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmManageIngredients));
             this.SaveIngBtn = new System.Windows.Forms.Button();
             this.IngQuantityLbl = new System.Windows.Forms.Label();
-            this.PasswordTxt = new System.Windows.Forms.TextBox();
+            this.MeasurementUnitTxt = new System.Windows.Forms.TextBox();
             this.IngUnitLbl = new System.Windows.Forms.Label();
-            this.UsernameTxt = new System.Windows.Forms.TextBox();
+            this.QuantityTxt = new System.Windows.Forms.TextBox();
             this.IngNameLbl = new System.Windows.Forms.Label();
-            this.FirstNameTxt = new System.Windows.Forms.TextBox();
+            this.IngNameTxt = new System.Windows.Forms.TextBox();
             this.NewIngGrBox = new System.Windows.Forms.GroupBox();
             this.RemoveGrBox = new System.Windows.Forms.GroupBox();
             this.IngChckLstBox = new System.Windows.Forms.CheckedListBox();
@@ -63,6 +63,7 @@
             this.SaveIngBtn.TabIndex = 46;
             this.SaveIngBtn.Text = "Save";
             this.SaveIngBtn.UseVisualStyleBackColor = false;
+            this.SaveIngBtn.Click += new System.EventHandler(this.SaveIngBtn_Click);
             // 
             // IngQuantityLbl
             // 
@@ -75,14 +76,14 @@
             this.IngQuantityLbl.TabIndex = 53;
             this.IngQuantityLbl.Text = "Quantity";
             // 
-            // PasswordTxt
+            // MeasurementUnitTxt
             // 
-            this.PasswordTxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PasswordTxt.Location = new System.Drawing.Point(42, 154);
-            this.PasswordTxt.Name = "PasswordTxt";
-            this.PasswordTxt.Size = new System.Drawing.Size(265, 24);
-            this.PasswordTxt.TabIndex = 50;
-            this.PasswordTxt.WordWrap = false;
+            this.MeasurementUnitTxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MeasurementUnitTxt.Location = new System.Drawing.Point(42, 154);
+            this.MeasurementUnitTxt.Name = "MeasurementUnitTxt";
+            this.MeasurementUnitTxt.Size = new System.Drawing.Size(265, 24);
+            this.MeasurementUnitTxt.TabIndex = 50;
+            this.MeasurementUnitTxt.WordWrap = false;
             // 
             // IngUnitLbl
             // 
@@ -95,13 +96,13 @@
             this.IngUnitLbl.TabIndex = 52;
             this.IngUnitLbl.Text = "Unit";
             // 
-            // UsernameTxt
+            // QuantityTxt
             // 
-            this.UsernameTxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.UsernameTxt.Location = new System.Drawing.Point(42, 100);
-            this.UsernameTxt.Name = "UsernameTxt";
-            this.UsernameTxt.Size = new System.Drawing.Size(265, 24);
-            this.UsernameTxt.TabIndex = 49;
+            this.QuantityTxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.QuantityTxt.Location = new System.Drawing.Point(42, 100);
+            this.QuantityTxt.Name = "QuantityTxt";
+            this.QuantityTxt.Size = new System.Drawing.Size(265, 24);
+            this.QuantityTxt.TabIndex = 49;
             // 
             // IngNameLbl
             // 
@@ -114,13 +115,13 @@
             this.IngNameLbl.TabIndex = 51;
             this.IngNameLbl.Text = "Name";
             // 
-            // FirstNameTxt
+            // IngNameTxt
             // 
-            this.FirstNameTxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.FirstNameTxt.Location = new System.Drawing.Point(42, 46);
-            this.FirstNameTxt.Name = "FirstNameTxt";
-            this.FirstNameTxt.Size = new System.Drawing.Size(265, 24);
-            this.FirstNameTxt.TabIndex = 48;
+            this.IngNameTxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.IngNameTxt.Location = new System.Drawing.Point(42, 46);
+            this.IngNameTxt.Name = "IngNameTxt";
+            this.IngNameTxt.Size = new System.Drawing.Size(265, 24);
+            this.IngNameTxt.TabIndex = 48;
             // 
             // NewIngGrBox
             // 
@@ -254,16 +255,16 @@
             this.Controls.Add(this.UpdateGrBox);
             this.Controls.Add(this.RemoveGrBox);
             this.Controls.Add(this.IngQuantityLbl);
-            this.Controls.Add(this.PasswordTxt);
+            this.Controls.Add(this.MeasurementUnitTxt);
             this.Controls.Add(this.IngUnitLbl);
-            this.Controls.Add(this.UsernameTxt);
+            this.Controls.Add(this.QuantityTxt);
             this.Controls.Add(this.IngNameLbl);
-            this.Controls.Add(this.FirstNameTxt);
+            this.Controls.Add(this.IngNameTxt);
             this.Controls.Add(this.NewIngGrBox);
             this.Controls.Add(this.SaveIngBtn);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmManageIngredients";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Manage Ingredients";
@@ -279,11 +280,11 @@
 
         private System.Windows.Forms.Button SaveIngBtn;
         private System.Windows.Forms.Label IngQuantityLbl;
-        private System.Windows.Forms.TextBox PasswordTxt;
+        private System.Windows.Forms.TextBox MeasurementUnitTxt;
         private System.Windows.Forms.Label IngUnitLbl;
-        private System.Windows.Forms.TextBox UsernameTxt;
+        private System.Windows.Forms.TextBox QuantityTxt;
         private System.Windows.Forms.Label IngNameLbl;
-        private System.Windows.Forms.TextBox FirstNameTxt;
+        private System.Windows.Forms.TextBox IngNameTxt;
         private System.Windows.Forms.GroupBox NewIngGrBox;
         private System.Windows.Forms.GroupBox RemoveGrBox;
         private System.Windows.Forms.CheckedListBox IngChckLstBox;

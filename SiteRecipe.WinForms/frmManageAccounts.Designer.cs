@@ -31,7 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmManageAccounts));
             this.ValidateGrBox = new System.Windows.Forms.GroupBox();
             this.GenderCbBox = new System.Windows.Forms.ComboBox();
-            this.Country = new System.Windows.Forms.TextBox();
+            this.CountryTxt = new System.Windows.Forms.TextBox();
             this.UsernameLbl = new System.Windows.Forms.Label();
             this.GenderLbl = new System.Windows.Forms.Label();
             this.BirthDateLbl = new System.Windows.Forms.Label();
@@ -45,8 +45,8 @@
             this.FirstNameLbl = new System.Windows.Forms.Label();
             this.FirstNameTxt = new System.Windows.Forms.TextBox();
             this.RemoveGrBox = new System.Windows.Forms.GroupBox();
-            this.ValidateBtn = new System.Windows.Forms.Button();
             this.UserChckLstBox = new System.Windows.Forms.CheckedListBox();
+            this.ValidateBtn = new System.Windows.Forms.Button();
             this.RemoveGrBox.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -75,13 +75,13 @@
             this.GenderCbBox.Size = new System.Drawing.Size(265, 26);
             this.GenderCbBox.TabIndex = 7;
             // 
-            // Country
+            // CountryTxt
             // 
-            this.Country.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Country.Location = new System.Drawing.Point(40, 154);
-            this.Country.Name = "Country";
-            this.Country.Size = new System.Drawing.Size(265, 24);
-            this.Country.TabIndex = 5;
+            this.CountryTxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CountryTxt.Location = new System.Drawing.Point(40, 154);
+            this.CountryTxt.Name = "CountryTxt";
+            this.CountryTxt.Size = new System.Drawing.Size(265, 24);
+            this.CountryTxt.TabIndex = 5;
             // 
             // UsernameLbl
             // 
@@ -215,6 +215,17 @@
             this.RemoveGrBox.TabStop = false;
             this.RemoveGrBox.Text = "Remove Account";
             // 
+            // UserChckLstBox
+            // 
+            this.UserChckLstBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.UserChckLstBox.FormattingEnabled = true;
+            this.UserChckLstBox.Location = new System.Drawing.Point(28, 33);
+            this.UserChckLstBox.Name = "UserChckLstBox";
+            this.UserChckLstBox.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.UserChckLstBox.ScrollAlwaysVisible = true;
+            this.UserChckLstBox.Size = new System.Drawing.Size(265, 137);
+            this.UserChckLstBox.TabIndex = 8;
+            // 
             // ValidateBtn
             // 
             this.ValidateBtn.BackColor = System.Drawing.SystemColors.ControlLight;
@@ -227,17 +238,7 @@
             this.ValidateBtn.TabIndex = 57;
             this.ValidateBtn.Text = "Validate";
             this.ValidateBtn.UseVisualStyleBackColor = false;
-            // 
-            // UserChckLstBox
-            // 
-            this.UserChckLstBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.UserChckLstBox.FormattingEnabled = true;
-            this.UserChckLstBox.Location = new System.Drawing.Point(28, 33);
-            this.UserChckLstBox.Name = "UserChckLstBox";
-            this.UserChckLstBox.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.UserChckLstBox.ScrollAlwaysVisible = true;
-            this.UserChckLstBox.Size = new System.Drawing.Size(265, 137);
-            this.UserChckLstBox.TabIndex = 8;
+            this.ValidateBtn.Click += new System.EventHandler(this.ValidateBtn_Click);
             // 
             // frmManageAccounts
             // 
@@ -248,7 +249,7 @@
             this.Controls.Add(this.ValidateBtn);
             this.Controls.Add(this.RemoveGrBox);
             this.Controls.Add(this.GenderCbBox);
-            this.Controls.Add(this.Country);
+            this.Controls.Add(this.CountryTxt);
             this.Controls.Add(this.UsernameLbl);
             this.Controls.Add(this.GenderLbl);
             this.Controls.Add(this.BirthDateLbl);
@@ -264,7 +265,7 @@
             this.Controls.Add(this.ValidateGrBox);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmManageAccounts";
             this.Text = "Manage Account";
             this.RemoveGrBox.ResumeLayout(false);
@@ -277,7 +278,7 @@
 
         private System.Windows.Forms.GroupBox ValidateGrBox;
         private System.Windows.Forms.ComboBox GenderCbBox;
-        private System.Windows.Forms.TextBox Country;
+        private System.Windows.Forms.TextBox CountryTxt;
         private System.Windows.Forms.Label UsernameLbl;
         private System.Windows.Forms.Label GenderLbl;
         private System.Windows.Forms.Label BirthDateLbl;

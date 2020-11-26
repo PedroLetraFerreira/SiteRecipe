@@ -57,6 +57,7 @@
             this.UserCbBox.Name = "UserCbBox";
             this.UserCbBox.Size = new System.Drawing.Size(265, 26);
             this.UserCbBox.TabIndex = 7;
+            this.UserCbBox.SelectedIndexChanged += new System.EventHandler(this.UserCbBox_SelectedIndexChanged);
             // 
             // FirstNameLbl
             // 
